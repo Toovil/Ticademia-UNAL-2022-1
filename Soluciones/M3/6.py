@@ -1,13 +1,6 @@
-c = int(input())
-k = int(input())
+x = float(input())
 
-percentage = ((k - c)/c) * 100
-
-if k > c:
-    gains = k - c
-    print(f"hubo una ganacia de $ {str(gains)} correspondiente al {str(percentage)}% del capital invertido") 
-elif c > k: 
-    lost = c - k
-    print(f"hubo una perdida de $ {str(lost)} correspondiente al {str(percentage)}% del capital invertido") 
+if(x < 10):
+    print(x + 5)
 else:
-    print("No hubo ni ganancia ni perdida, la inversion fue un desperdicio de tiempo, pero al menosno de dinero ")
+    print(x - 8)
