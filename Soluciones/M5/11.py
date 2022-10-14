@@ -1,16 +1,28 @@
-a = int(input())  
+"""a = int(input())  
 p = int(input()) 
 q = int(input())
 
-
-
 for i in range(p, q , 1):
-    change = a // i
-    if(change % i == 0):
-        if( i == q ):
-            print(f"{a} es polifactor entre {p} y {q}")
-            break
+    change = a % i
+    if(change != 0):
+        print(f"{a} es polifactor entre {p} y {q}")
+        continue
     else:
-        print(f"{a} no es polifactor entre {p} y {q}")
-        break
 
+        print(f"{a} es polifactor entre {p} y {q}")
+        continue
+
+
+
+def rec(X):
+
+    if X < 1:
+
+        return 0
+
+    return 4*X + rec(X-1)
+
+ 
+
+print(rec(6)-5)
+"""
