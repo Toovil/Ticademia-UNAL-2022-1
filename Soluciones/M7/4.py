@@ -2,8 +2,6 @@
 # V es la velocidad del observador
 from math import sqrt
 lista = []
-resultado = []
-cadena = ''
 c = 299792458
 n = int(input())
 
@@ -14,9 +12,6 @@ for i in range(n):
 def lorentz(lista):
     for j in lista:
        lorent = 1 / sqrt(1 - (j)**2/(c)**2)
-       resultado.append(lorent)
-    
-    cadena = "".join(resultado)
-    return cadena
+       print(round(float(lorent), 15))
 
-print(lorentz(lista))
+lorentz(lista)

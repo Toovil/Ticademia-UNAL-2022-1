@@ -1,32 +1,27 @@
 listnum = []
 nums = []
 
-
 def hyperpar(numtext):
     countodd = 0
     counteven = 0
     for i in numtext:
-        listnum.append(i)
+        listnum.append(int(i))
 
-    for j in listnum:
-        nums.append(int(j))
+    print(listnum)
 
-    for x in nums:
-        if nums[x] % 2 == 0:
+    for x in listnum:
+        if listnum[x] % 2 == 0:
             countodd += 1
         else:
             counteven += 1
 
-    if countodd == len(nums):
+    if countodd == len(listnum):
         print("Hyperpar")
     else:
         print("No es hyperpar")
 
-
-
-
 while True:
     numtext = input()
-    hyperpar(numtext)
     if int(numtext) == -1:
         break
+    hyperpar(numtext)
