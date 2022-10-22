@@ -1,0 +1,6 @@
+escalera_normal = {
+    
+
+
+
+}

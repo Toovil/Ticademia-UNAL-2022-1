@@ -2,7 +2,7 @@ def multidig(num):
     numlist = []
     count = 0
     for i in num:
-        if i not in numlist or 1 <= i <= 5:
+        if i not in numlist:
             numlist.append(i)
             count += 1
             if count == len(num):
