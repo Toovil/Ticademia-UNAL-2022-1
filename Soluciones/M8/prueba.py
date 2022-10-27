@@ -1,17 +1,33 @@
-def card(v, p):
-    nueva_carta = [v, p]
-    return nueva_carta
+texto = 'fundamentos de programacion'
 
-cartas = []
+sep = ':'
 
-a = int(input())
+end = ' !'
 
-for i in range(a):
-    counter = 0
-    while counter < 5:
-        x = int(input())
-        y = input()
-        cartas.append(card(x, y))
-        counter += 1
+fib = [0,  1,  1,  2,  3,  5,  8, 13, 21]
 
-    print('Evaluation unimplemented.')
+num = 76731
+
+lista = []
+
+for i in fib:
+
+    lista.append(texto[i])
+
+msg = ''
+
+while num > 1:
+
+    if num > 10:
+
+        msg += (lista[num%10] + sep)
+
+    else:
+
+        msg += lista[num%10]
+
+    num //= 10
+
+msg += end
+
+print(msg)
