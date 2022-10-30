@@ -1,9 +1,6 @@
-archivo = open("Soluciones/M9/8/mensaje.txt", "w")
+archivo = open("Soluciones/M9/8/mensaje.txt", "r")
+texto = ""
+for renglon in archivo:
+    print(texto.join(list(reversed(renglon))))
 
-def encriptar(archivo):
-    mensaje = input()
-    for i in range(mensaje):
-        break
-    print(mensaje, file = archivo)
-
-encriptar(archivo)
+archivo.close()

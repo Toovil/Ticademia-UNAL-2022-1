@@ -1,8 +1,9 @@
 def conversor(mensaje):
+    camel_list = []
     mensaje = mensaje.split("_")
     for palabra in mensaje:
-        palabra.capitalize()
-    mensaje = "".join(mensaje)
+        camel_list.append(palabra.capitalize())
+    mensaje = "".join(camel_list)
     return mensaje
 
 num = int(input())
