@@ -4,14 +4,14 @@ def promedio(lista_):
   cal_total = 0
 
   for i in lista_[1:]:
-    for j in lista_talleres: 
-      cal_taller += round(((int(i) / j)),1)
-      cal_total += cal_taller * 5
+    for j in (lista_talleres): 
+      cal_taller += round(((int(i) / j)*5),1)
+      lista_talleres.remove(j)
       break
 
+  cal_total = cal_taller/12 
 
-  promedio_total = cal_total/120
-  return round(promedio_total, 1)
+  return round(cal_total, 1)
 
   
 n = int(input())
