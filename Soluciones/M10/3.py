@@ -5,21 +5,19 @@ def insalubles(empleado):
     return None
 
 
-def main():
-    num_empleados = int(input())
-    lista_insalubles = []
-    count = 0
+num_empleados = int(input())
+lista_insalubles = []
+count = 0
 
-    for i in range(num_empleados):
-        empleado = input().split(", ")
+for i in range(num_empleados):
+    empleado = input().split(", ")
         
-        if insalubles(empleado) != None:
-            lista_insalubles.append(insalubles(empleado))
-    lista_insalubles.sort(key=lambda x: x[1], reverse=True)
+    if insalubles(empleado) != None:
+        lista_insalubles.append(insalubles(empleado))
 
-    for j in lista_insalubles:
-        count += 1
-        print(count, *j)
+lista_insalubles.sort(key=lambda x: x[0], reverse=True)
+lista_insalubles.sort(key=lambda x:x[1], reverse=True)
 
-
-main()
+for j in lista_insalubles:
+    count += 1
+    print(count, *j)
