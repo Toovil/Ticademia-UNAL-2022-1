@@ -1,26 +1,25 @@
-def traductor(palabras, palabra_ewokes ):
-    lista_ewokes = []
-    lista_español = []
-    for i in palabras:
-        lista_ewokes.append(i)
+def traductor(palabras_espanol, palabras_ewokes, a_traducir):
+    for d in a_traducir:
+        if d in palabras_ewokes:
+            index = palabras_ewokes.index(d)
+            print(f"{palabras_espanol[index]}", end=" ")
+        else:
+            print("palabra no encontrada")
 
-
-
-    return None
-
-def main():
+def main():    
     cantidad_palabras = int(input())
     lista_palabras_ewokes = []
     lista_palabras_espanol = []
 
     for i in range(cantidad_palabras):
         palabras = input().split(" ")
-        lista_palabras_ewokes.append(palabras[0][0])
-        continue
-    
+        lista_palabras_ewokes.append(palabras[0])
+        lista_palabras_espanol.append(palabras[1])
+            
     cantidad_traducir = int(input())
-    for j in range(cantidad_traducir) :
-        palabra_ewokes = input()
-        traductor(lista_palabras_ewokes, palabra_ewokes)
+
+    for j in range(cantidad_traducir):
+        ewokes_traducir = input().split()
+        traductor(lista_palabras_espanol, lista_palabras_ewokes, ewokes_traducir)
 
 main()
