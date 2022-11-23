@@ -1,3 +1,5 @@
+#LISTO, RECUERDA QUITAR EL ("M9/9/cadena.txt","r") Y PONER ("cadena.txt", "r")
+
 a=open("M9/9/cadena.txt","r")
 for i in a:
   Lista=i.split() 

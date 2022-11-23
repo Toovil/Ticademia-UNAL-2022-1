@@ -1,12 +1,13 @@
+#NO ESTÁ LISTO
 def cartas(valor, palo):
     carta = [valor, palo]
     return carta
 
 def escalera_normal(lista_cartas):
     orden_cartas = [2,3,4,5,6,7,8,9,10,"J","Q","K","A"]
-    for carta in lista_cartas:
+    """for carta in lista_cartas:
         for cartas_ordenadas in range(orden_cartas):
-            if carta[0] == 
+            if carta[0] == 0:"""
     
 
 def color():

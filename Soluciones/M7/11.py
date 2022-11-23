@@ -1,5 +1,6 @@
-"""import functools
-from math import factorial
+#NO ESTÁ LISTO
+import functools
+from math import factorial as factorial
 
 
 def arrlist(int_):
@@ -20,16 +21,7 @@ def is_fuerte(value):
         print(f'{value} no es fuerte')
 
 
-def main():
-    values = int(input())
-    for i in range(values):
-        value = int(input())
-        is_fuerte(value)
-if __name__ == '__main__':
-    main()"""
-
-def cuadrado(x):
-    return x**2
-
-n = 5
-print(cuadrado(n))
+values = int(input())
+for i in range(values):
+    value = int(input())
+    is_fuerte(value)

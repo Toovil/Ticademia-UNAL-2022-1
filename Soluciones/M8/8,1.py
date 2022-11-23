@@ -1,6 +1,0 @@
-escalera_normal = {
-    
-
-
-
-}

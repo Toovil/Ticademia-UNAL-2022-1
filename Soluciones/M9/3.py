@@ -1,3 +1,4 @@
+#LISTO
 def encontrar_procedencia(nombre):
     if nombre[-2:] == "ix":
         return "Galo"

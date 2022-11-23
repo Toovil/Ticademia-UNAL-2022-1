@@ -1,11 +1,11 @@
-a=open("conversaciones.txt","r")
-#Estas variables pueden ir adentro del ciclo, así no será necesario renombrarlas abajo nuevamente.
-OP=0 #Casos opositivos por renglón
-CA=0 #Casos causativos por renglón
+#LISTO, RECUERDA CAMBIAR LO QUE TE HE DICHO
+a=open("M9/10/conversaciones.txt","r")
+OP=0 
+CA=0 
 for i in a:
-    I=i.lower() #Cada renglón lo vuelvo todo en minúsculas, así me será más sencillo y evitar errores al comparar texto
+    I=i.lower() 
     if "sin embargo" in I:
-        OP+=I.count("sin embargo") #Cuántas veces está ese Opositivo en el renglón. Así si es que aparece más de una vez no los cuento por separado
+        OP+=I.count("sin embargo")
     if "no obstante" in I:
         OP+=I.count("no obstante")
     if "ahora bien" in I:
@@ -13,7 +13,7 @@ for i in a:
     if "aun asi" in I:
         OP+=I.count("aun asi")
     if "por tanto" in I:
-        CA+=I.count("por tanto") #Cuántas veces está ese Causativo en el renglón. Así si es que aparece más de una vez no los cuento por separado
+        CA+=I.count("por tanto") 
     if "dado que" in I:
         CA+=I.count("dado que")
     if "por consiguiente" in I:
@@ -23,7 +23,7 @@ for i in a:
     if "por ende" in I:
         CA+=I.count("por ende")
     print(f"Opositivos {OP} Causativos {CA}")
-    #Reinicio los valores porque los necesito por cada renglón, no que se acumulen con los del renglón anterior
+    
     OP=0
     CA=0
 a.close()

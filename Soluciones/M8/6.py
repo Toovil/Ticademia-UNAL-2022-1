@@ -1,3 +1,4 @@
+#NO ESTÁ LISTO
 def multidig(num):
     numlist = []
     count = 0

@@ -1,9 +1,10 @@
+#NO ESTÁ LISTO
 def order(lis):
     new_list = []
 
-    for j in lis:
+    for j in range(len(lis)):
         if(lis[j] < lis[j-1]):
-            new_list.append(j)
+            new_list.append(lis[j])
 
     return new_list
 
@@ -11,7 +12,7 @@ total_players = int(input())
 each_list = []
 
 for i in range(total_players):
-    each_number = int(input())
+    each_number = float(input())
     each_list.append(each_number)
 
-order(each_list)
+print(order(each_list))

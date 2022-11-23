@@ -1,3 +1,5 @@
+#NO ESTÁ LISTO
+
 def lucas(A,B):
     lista = []
     counter = 0

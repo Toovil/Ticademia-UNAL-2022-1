@@ -1,3 +1,4 @@
+#LISTO
 a=open("M9/11/trifelios.txt","r")
 for i in a:
     Lista=i.rstrip("\n") 

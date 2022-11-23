@@ -1,3 +1,4 @@
+#LISTO
 def Armstrong(num):
     totalF = 0
     leng = len(num)

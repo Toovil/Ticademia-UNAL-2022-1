@@ -1,3 +1,4 @@
+#LISTO
 def panvocalica(palabra):
     vocales = ["a", "e", "i", "o", "u"]
     lista_comprueba = []

@@ -1,3 +1,4 @@
+#LISTO
 def promedio(lista_):
   lista_talleres = [9, 11, 12, 8, 12,9,11,8,11,10,9,10]
   cal_taller = 0

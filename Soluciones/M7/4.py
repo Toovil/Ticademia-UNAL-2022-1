@@ -1,3 +1,5 @@
+#LISTO
+
 # C es la velocidad de la luz en el vacío(299792458 metros/segundo)
 # V es la velocidad del observador
 from math import sqrt

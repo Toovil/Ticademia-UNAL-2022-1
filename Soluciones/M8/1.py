@@ -1,3 +1,4 @@
+#NO ESTÁ LISTO
 def dibujar(dimension):
     for fila in range(dimension):
         for columna[fila] in fila:

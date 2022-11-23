@@ -1,3 +1,4 @@
+#LISTO
 def mas_viejo(lista_):
     for i in (lista_):
         if min(lista_) == i:

@@ -1,3 +1,4 @@
+#LISTO
 def encuesta(info):
   for i in range(len(info)):
     info[i][1] = info[i][1].upper()

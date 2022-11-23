@@ -1,3 +1,4 @@
+#LISTO
 def circuito(pareja_cable):
     count_m = 0
     count_f = 0
