@@ -1,23 +1,23 @@
-n=int(input())
-for i in range (n):
-    saltos={}
-    m=int(input())
-    for i in range(m):
-        universe=input()
-        universe=universe.split(' ')
-        saltos[universe[0]]=universe[1]
+num=int(input())
+for i in range (num):
+    jumps={}
+    n=int(input())
+    for i in range(n):
+        universo=input()
+        universo=universo.split(' ')
+        jumps[universo[0]]=universo[1]
     universo='C-137'
-    ct=1
-    for k in range(m):
-         universo=saltos[universo]
-         if universo in saltos:
+    kt=1
+    for k in range(n):
+         universo=jumps[universo]
+         if universo in jumps:
           if universo != 'C-137':
-             ct+=1 
+             kt+=1 
           else:
              break
          else:
              break
     if universo=='C-137':
-       print('Pueden volver a C-137 en {} saltos'.format(ct))
+       print('Pueden volver a C-137 en {} saltos'.format(kt))
     else:
         print('Deambulan por el multiverso')

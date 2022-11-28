@@ -1,17 +1,17 @@
-def clorox(x):
-    x=x.lower()
-    x=x.lstrip('¿')
-    x=x.lstrip('¡')
-    x=x.rstrip('?')
-    x=x.rstrip('!')
-    x=x.rstrip(',')
-    x=x.rstrip('.')
-    x=x.rstrip(';')
-    x=x.rstrip(':') 
-    return x
-a=open('discurso.txt','r')
-dic={}
-cuchao=[]
+def clorox(b):
+    b=b.lower()
+    b=b.lstrip('¿')
+    b=b.lstrip('¡')
+    b=b.rstrip('?')
+    b=b.rstrip('!')
+    b=b.rstrip(',')
+    b=b.rstrip('.')
+    b=b.rstrip(';')
+    b=b.rstrip(':') 
+    return b
+a=open('M12/textos/discurso.txt','r')
+dic_={}
+cu_=[]
 for i in a:
     y=i.split()
     l=[]
@@ -21,12 +21,12 @@ for i in a:
             if not j in l:
                 l.append(j)
     for k in l:            
-        if k in dic:
-            dic[k]+=1 
+        if k in dic_:
+            dic_[k]+=1 
         else:    
-            dic[k]=1
-            cuchao.append(k)  
-cuchao.sort()
-for i in cuchao:
-    print(i,dic[i])    
+            dic_[k]=1
+            cu_.append(k)  
+cu_.sort()
+for i in cu_:
+    print(i,dic_[i])    
 a.close()

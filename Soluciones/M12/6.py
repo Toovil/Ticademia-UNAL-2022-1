@@ -1,28 +1,30 @@
-def mindhunter(x):
-    valor=(x[1]-x[0]).days
+from datetime import datetime
+
+def hunter_(x):
+    value=(x[1]-x[0]).days
     for i in range(1,len(x)):
-        if (x[i]-x[i-1]).days!=valor:
+        if (x[i]-x[i-1]).days!=value:
             return False
     return True    
-from datetime import datetime
-n=int(input())
-ajiaco=[]
-for i in range(n):
-    asesino=input()
-    asesino=asesino.split(', ')
-    d=int(asesino[1])
+
+num=int(input())
+g=[]
+for i in range(num):
+    killer=input()
+    killer=killer.split(', ')
+    d=int(killer[1])
     fecha=[]
     for j in range(d):
-        dia=input()
-        dia=datetime.strptime(dia,'%Y-%m-%d')
-        fecha.append(dia)
-    if mindhunter(fecha):
-        dif=fecha[1]-fecha[0]
-        premonicion=fecha[-1]+dif
-        prem=datetime.strftime(premonicion,'%Y-%m-%d')
-        ajiaco.append(str(str(asesino[0])+' ataca cada '+str(dif.days)+' dias y volvera a hacerlo en '+str(prem)))
+        day=input()
+        day=datetime.strptime(day,'%Y-%m-%d')
+        fecha.append(day)
+    if hunter_(fecha):
+        diferencia=fecha[1]-fecha[0]
+        premonition=fecha[-1]+diferencia
+        pre=datetime.strftime(premonition,'%Y-%m-%d')
+        g.append(str(str(killer[0])+' ataca cada '+str(diferencia.days)+' dias y volvera a hacerlo en '+str(pre)))
     else:
-        ajiaco.append(str(str(asesino[0])+' no es asesino(a) serial periodico'))
-for i in ajiaco:
+        g.append(str(str(killer[0])+' no es asesino(a) serial periodico'))
+for i in g:
     print(i)
     print()  

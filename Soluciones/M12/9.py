@@ -1,5 +1,5 @@
-archivo = open('matrix.txt','r')
-preguntas = []
+archivo = open('M12/textos/matrix.txt','r')
+questions = []
 
 for renglon in archivo:
     renglon = renglon.rstrip('\n')
@@ -11,20 +11,20 @@ for renglon in archivo:
     i = 0
     
     while i <len(renglon):        
-        palabra = renglon[i]
-        if palabra.startswith('?'):
-            pre = ''
-            ini = renglon.index(palabra)
-            for p in renglon[ini:]:
-                pre += p + ' '
+        word = renglon[i]
+        if word.startswith('?'):
+            before = ''
+            init = renglon.index(word)
+            for p in renglon[init:]:
+                before += p + ' '
                 if p.endswith('?'):
-                    fin = renglon.index(p)
+                    end = renglon.index(p)
                     break
-            if pre not in preguntas: #pa que no se repitan
-                preguntas.append(pre)
-            del renglon[:fin]
+            if before not in questions: #pa que no se repitan
+                questions.append(before)
+            del renglon[:end]
         else :
             i = i+1
             
-for i in preguntas:
+for i in questions:
     print(i.rstrip(' '))

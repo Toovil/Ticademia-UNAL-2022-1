@@ -1,17 +1,17 @@
-A=open('cameos.txt', 'r')
-B='saramago'
-for renglon in A:
+archivo =open('cameos.txt', 'r')
+x='saramago'
+for renglon in archivo:
     a=renglon.lower()
     a=a.replace(',', '')
     a=a.replace('.', '')
     a=a.replace('\n', '')
-    c=0
+    j=0
     t=0
     for letra in a:
-        if B[c]==letra:
-            c+=1
-            if c==7:
+        if x[j]==letra:
+            j+=1
+            if j==7:
                 t+=1
-                c*=0
+                j*=0
     print(t)
-A.close()
+archivo.close()

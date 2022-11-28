@@ -1,25 +1,25 @@
-C = int(input())
-for i in range (C):
-    n=input()
-    entrada = n.replace(' ','').split(':')
-    guia=[]
-    eje = []
-    eje[:] = entrada[1]
-    guia[:]=entrada[0]
+cantidad = int(input())
+for i in range (cantidad):
+    num=input()
+    input_ = num.replace(' ','').split(':')
+    guide=[]
+    axis = []
+    axis[:] = input_[1]
+    guide[:]=input_[0]
     
-    if len(guia)==len(eje):
-         for i in eje:
-             if guia.count(i) != eje.count(i):
+    if len(guide)==len(axis):
+         for i in axis:
+             if guide.count(i) != axis.count(i):
                  print('No es anagrama')
-                 anagrama = False
+                 anagram = False
                  break
-             if i in entrada[0]:
-                 anagrama = True
+             if i in input_[0]:
+                 anagram = True
              else:
                  print('No es anagrama')
-                 anagrama = False
+                 anagram = False
                  break
-         if anagrama == True:
+         if anagram == True:
              print('Es anagrama')
     else:
         print('No es anagrama')
