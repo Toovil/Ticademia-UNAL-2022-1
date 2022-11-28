@@ -1,4 +1,5 @@
-#Casi
+
+
 from datetime import datetime, timedelta
 
 
@@ -14,7 +15,6 @@ def how_many_days(arr, day):
         print(count)
 
 
-def main():
     c = int(input())
     date_ranges = []
 
@@ -26,4 +26,3 @@ def main():
     how_many_days(date_ranges, "Monday")
 
 
-main()

@@ -1,4 +1,5 @@
-"""a = int(input())  
+#incompleto
+a = int(input())  
 p = int(input()) 
 q = int(input())
 
@@ -25,4 +26,3 @@ def rec(X):
  
 
 print(rec(6)-5)
-"""

@@ -12,3 +12,5 @@ for i in range(num_personas):
     print(alias_personas[0])
     
             
+
+

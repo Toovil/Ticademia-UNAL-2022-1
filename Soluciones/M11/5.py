@@ -1,22 +1,22 @@
-#Casi
 from datetime import timedelta
 
-def tiempo_en(registers):
-    tiempo_barbero = []
+
+def time_in(registers):
+    time_in_barber = []
     for r in registers:
-        date, empieza_tiempo, tiempo_atrás = r
-        hora_0, min_0, seg_0 = empieza_tiempo.split(":")
-        hora_1, min_1, seg_1 = tiempo_atrás.split(":")
-        empieza_tiempo = timedelta(hours=int(hora_0), minutes=int(min_0), seconds=int(seg_0))
-        tiempo_atrás = timedelta(hours=int(hora_1), minutes=int(min_1), seconds=int(seg_1))
-        restante = tiempo_atrás - empieza_tiempo
+        date, time_go, time_back = r
+        h0, m0, s0 = time_go.split(":")
+        h1, m1, s1 = time_back.split(":")
+        time_go = timedelta(hours=int(h0), minutes=int(m0), seconds=int(s0))
+        time_back = timedelta(hours=int(h1), minutes=int(m1), seconds=int(s1))
+        time_left = time_back - time_go
 
-        tiempo_barbero.append(restante)
+        time_in_barber.append(time_left)
 
-    promo = sum(tiempo_barbero, start=timedelta()) / len(tiempo_barbero)
-    hora, minu, seg = promo.seconds // 3600, promo.seconds // 60 % 60, promo.seconds % 60
+    prom = sum(time_in_barber, start=timedelta()) / len(time_in_barber)
+    h, m, s = prom.seconds // 3600, prom.seconds // 60 % 60, prom.seconds % 60
 
-    print(f"{hora} horas, {minu} minutos, {seg} segundos")
+    print(f"{h} horas, {m} minutos, {s} segundos")
 
 
 
@@ -25,11 +25,11 @@ registers = []
 
 for i in range(c):
     entry = input()
-    date, place, empieza_tiempo, tiempo_atrás = entry.split(", ")
+    date, place, time_go, time_back = entry.split(", ")
 
     if place == "barberia":
-       registers.append([date, empieza_tiempo, tiempo_atrás])
+        registers.append([date, time_go, time_back])
 
-tiempo_en(registers)
+time_in(registers)
 
 

@@ -9,7 +9,7 @@ def clorox(b):
     b=b.rstrip(';')
     b=b.rstrip(':') 
     return b
-a=open('M12/textos/discurso.txt','r')
+a=open('discurso.txt','r')
 dic_={}
 cu_=[]
 for i in a:
